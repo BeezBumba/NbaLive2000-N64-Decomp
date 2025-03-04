@@ -1,0 +1,8 @@
+asm/
+assets/
+build/
+baserom.us.z64
+nbalive2000.ld
+nbalive2000.d
+undefined_funcs_auto.txt
+undefined_syms_auto.txt

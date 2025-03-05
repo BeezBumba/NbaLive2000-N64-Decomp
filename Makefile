@@ -1,7 +1,7 @@
 ### Build Options ###
 
 BASEROM      := baserom.us.z64
-TARGET       := nbalive2000
+TARGET       := maddennfl2002
 COMPARE      ?= 1
 NON_MATCHING ?= 0
 CHECK        ?= 1
@@ -52,7 +52,7 @@ LD_MAP    := $(BUILD_DIR)/$(TARGET).map
 
 PYTHON     := python3
 N64CKSUM   := $(PYTHON) tools/n64cksum.py
-SPLAT_YAML := nbalive2000.yaml
+SPLAT_YAML := maddennfl2002.yaml
 SPLAT      := splat split $(SPLAT_YAML)
 EMULATOR   := mupen64plus
 DIFF       := diff
@@ -99,7 +99,7 @@ OPTFLAGS := -O1
 ### Sources ###
 
 # Object files
-OBJECTS := $(shell grep -E 'build.+\.o' nbalive2000.ld -o)
+OBJECTS := $(shell grep -E 'build.+\.o' maddennfl2002.ld -o)
 DEPENDS := $(OBJECTS:=.d) 
 
 ### Targets ###
@@ -119,7 +119,7 @@ distclean: clean
 	$(V)rm -rf asm
 	$(V)rm -rf assets
 	$(V)rm -f *auto.txt
-	$(V)rm -f nbalive2000.ld
+	$(V)rm -f maddennfl2002.ld
 	$(V)rm -f include/ld_addrs.h
 
 setup: distclean split
